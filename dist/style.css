@@ -1,0 +1,106 @@
+body, html{
+    height: 100%;
+
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    background: #779be0;
+}
+
+.fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.velha{
+    display: flex;
+    justify-content: center;
+}
+
+.velha .coluna{
+    display: flex;
+    flex-direction: column;
+    border-right: 5px solid white;
+}
+
+.velha .coluna:last-child{
+    border: none;
+}
+
+.velha .quadro{
+    height: 125px;
+    width: 125px;
+    border-bottom: 5px solid white;
+
+    font-size: 5em;
+    font-weight: 100;
+    text-align: center;
+
+    color: white;
+}
+
+.velha .quadro:last-child{
+    border: none;
+}
+
+span{
+    user-select: none;
+    margin: 0;
+}
+
+#modais{
+
+    position: absolute;
+    margin: 130px auto;
+    font-family: inherit;
+    z-index: 3;
+
+}
+
+.modalClass{
+    background: white;
+    width: 200px;
+    padding: 20px;
+    display: block;
+    margin-bottom: 10px;
+    animation-name: aparecer;
+    animation-duration: .8s;
+}
+
+.remover{
+    animation: desaparecer .8s;
+    animation-fill-mode: forwards;
+}
+
+.mb-3{
+    margin: 1rem !important;
+}
+
+.retornar{
+    margin-left: 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+@keyframes aparecer{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes desaparecer{
+    50%{
+        transform: translateX(15%);
+    }
+    100%{
+        transform: translateX(-200%);
+    }
+}
